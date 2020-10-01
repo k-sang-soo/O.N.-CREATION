@@ -1,0 +1,259 @@
+/********************** 변수 **********************/
+$logo-green: #4aa389;
+$logo-coral: #da6d75;
+$darkgray: #212121;
+$white: #f9f9f9;
+$gray: #7c7d80;
+$font-light: 300;
+$font-regular: 400;
+$font-medium: 500;
+$font-semi-bold: 600;
+$font-bold: 700;
+$font-extra-bold: 800;
+$font-black: 900;
+
+/********************** 초기화 코드 **********************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+    font-weight: $font-regular;
+    color: $white;
+}
+body {
+    background: $darkgray;
+}
+
+a {
+    text-decoration: none;
+    color: $white;
+}
+
+li {
+    list-style: none;
+}
+
+/**************************** PC ***********************************/
+
+header {
+    height: 80px;
+    background: $darkgray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding-left: 156px;
+    padding-right: 156px;
+    .logo_img_container {
+        width: 153px;
+        img {
+            width: 100%;
+        }
+    }
+
+    .nav {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        opacity: 0;
+        transform: translateY(-20px);
+        animation: order4-nav 400ms linear forwards;
+        animation-delay: 1500ms;
+
+        li {
+            margin-right: 56px;
+
+            a {
+                padding: 8px 12px;
+
+                &:hover {
+                    color: $logo-green;
+                }
+            }
+        }
+
+        li:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.home_wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .home_article {
+        width: 100%;
+        font-size: 1.25vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .home_img_container {
+            width: 28.13vw;
+            margin-bottom: 0.34em;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: order3-logo 400ms linear forwards;
+            animation-delay: 1500ms;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .mid_line {
+            width: 100%;
+            height: 2px;
+            background: $logo-green;
+            position: relative;
+            transform: translateX(-100%);
+            animation: order2-mid-line 400ms linear forwards;
+            animation-delay: 1100ms;
+            z-index: 99;
+
+            .scroll_indicator {
+                width: 0;
+                height: 2.5px;
+                background: $logo-coral;
+                position: relative;
+            }
+            .scroll_indicator_effect {
+                position: absolute;
+                top: 50%;
+                left: -15px;
+                transform: translateY(-50%);
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: var(--logo-coral);
+            }
+        }
+
+        .ideology {
+            margin-top: 0.34em;
+            white-space: nowrap;
+
+            .ideology_green {
+                color: $logo-green;
+            }
+
+            .ideology_coral {
+                color: $logo-coral;
+            }
+
+            span {
+                opacity: 0;
+                animation: texts 65ms linear forwards;
+            }
+
+            .text_b {
+                animation-delay: 65ms;
+            }
+            .text_c {
+                animation-delay: 130ms;
+            }
+            .text_d {
+                animation-delay: 195ms;
+            }
+            .text_e {
+                animation-delay: 260ms;
+            }
+            .text_f {
+                animation-delay: 325ms;
+            }
+            .text_g {
+                animation-delay: 390ms;
+            }
+            .text_i {
+                animation-delay: 455ms;
+            }
+            .text_m {
+                animation-delay: 520ms;
+            }
+            .text_n {
+                animation-delay: 585ms;
+            }
+            .text_o {
+                animation-delay: 650ms;
+            }
+            .text_r {
+                animation-delay: 715ms;
+            }
+            .text_s {
+                animation-delay: 780ms;
+            }
+            .text_t {
+                animation-delay: 845ms;
+            }
+            .text_v {
+                animation-delay: 910ms;
+            }
+
+            .text_comma {
+                animation-delay: 975ms;
+            }
+
+            .text_stop {
+                animation-delay: 975ms;
+            }
+        }
+    }
+}
+
+.about_wrapper {
+    height: 100vh;
+}
+
+.work_wrapper {
+    height: 100vh;
+}
+
+.contact_wrapper {
+    height: 100vh;
+}
+
+/********** animation *********/
+
+@keyframes texts {
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes order2-mid-line {
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes order3-logo {
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes order4-nav {
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/************************* 1280 반응형 *******************************/
+
+@media screen and (max-width: 1280px) {
+    header {
+        padding-left: 65px;
+        padding-right: 65px;
+    }
+}
