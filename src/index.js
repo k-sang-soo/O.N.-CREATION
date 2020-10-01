@@ -13,8 +13,13 @@ window.addEventListener('load', () => {
     const navList = document.querySelector('.nav');
     const navListAni = document.querySelectorAll('.nav > li');
 
-    console.log(midLineTop);
+    const aboutTitle = document.querySelector('.about-title');
+    const aboutTitleStandard = document.querySelector('.about-article');
+    const aboutTitleLeft = aboutTitleStandard.offsetWidth;
+
+    console.dir(aboutTitleStandard);
     console.log(midLineTop - headerHeight);
+    aboutTitle.style.width = `${aboutTitleLeft}px`;
     window.addEventListener('scroll', () => {
         let winY = window.pageYOffset;
         console.log(winY);

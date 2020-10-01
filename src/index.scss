@@ -217,6 +217,60 @@ header {
 
 .about_wrapper {
     height: 100vh;
+    position: relative;
+
+    .about-title {
+        font-size: 41px;
+        font-weight: $font-bold;
+        margin: 1.7em auto;
+        letter-spacing: 0.07em;
+    }
+
+    article {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        .about_img_container {
+            width: 656px;
+            img {
+                width: 100%;
+            }
+        }
+        .about_introduce {
+            margin-left: 4em;
+            .introduce_header {
+                white-space: nowrap;
+                font-size: 24px;
+                .introduce_img_container {
+                    width: 12vw;
+                }
+                .introduce_header_title {
+                    font-weight: $font-medium;
+                    margin-bottom: 1.5em;
+                }
+            }
+
+            .introduce_main {
+                font-size: 20px;
+                font-weight: $font-light;
+                margin-bottom: 2.4em;
+                line-height: 1.85;
+                white-space: nowrap;
+            }
+
+            .introduce_work_list {
+                margin-left: 20px;
+                font-size: 19px;
+                font-weight: $font-light;
+                line-height: 1.85;
+                white-space: nowrap;
+                li {
+                    list-style: disc outside;
+                }
+            }
+        }
+    }
 }
 
 .work_wrapper {
@@ -255,6 +309,28 @@ header {
     }
 }
 
+/************************* 1600 반응형 *******************************/
+@media screen and (max-width: 1600px) {
+    .about_wrapper {
+        article {
+            .about_img_container {
+                width: 500px;
+            }
+            .about_introduce {
+                .introduce_header {
+                    font-size: 18px;
+                }
+                .introduce_main {
+                    font-size: 15px;
+                }
+                .introduce_work_list {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+
 /************************* 1280 반응형 *******************************/
 
 @media screen and (max-width: 1280px) {
@@ -268,6 +344,48 @@ header {
 
         .nav {
             font-size: 14px;
+        }
+    }
+
+    .about_wrapper {
+        article {
+            .about_img_container {
+                width: 447px;
+            }
+            .about_introduce {
+                .introduce_header {
+                    font-size: 15px;
+                }
+                .introduce_main {
+                    font-size: 13px;
+                }
+
+                .introduce_work_list {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}
+
+/************************* 1100 반응형 *******************************/
+@media screen and (max-width: 1100px) {
+    .about_wrapper {
+        article {
+            .about_img_container {
+                width: 380px;
+            }
+            .about_introduce {
+                .introduce_header {
+                    font-size: 13px;
+                }
+                .introduce_main {
+                    font-size: 11px;
+                }
+                .introduce_work_list {
+                    font-size: 11px;
+                }
+            }
         }
     }
 }
@@ -285,6 +403,38 @@ header {
 
             .home_img_container {
                 width: 46.13vw;
+            }
+        }
+    }
+
+    .about_wrapper {
+        height: 100%;
+        padding: 0 24px;
+        .about-title {
+            margin: 1.7em 0;
+        }
+        article {
+            flex-direction: column;
+            transform: translateX(0);
+            position: static;
+            .about_img_container {
+                width: 100%;
+            }
+            .about_introduce {
+                margin-left: 0;
+                margin-top: 2em;
+                .introduce_header {
+                    font-size: 18px;
+                    .introduce_img_container {
+                        width: 30vw;
+                    }
+                }
+                .introduce_main {
+                    font-size: 16px;
+                }
+                .introduce_work_list {
+                    font-size: 16px;
+                }
             }
         }
     }
@@ -377,6 +527,42 @@ header {
         }
     }
 
+    .about_wrapper {
+        article {
+            .about_img_container {
+                width: 100%;
+            }
+            .about_introduce {
+                margin-left: 0;
+                margin-top: 2em;
+                .introduce_header {
+                    font-size: 18px;
+                    // .introduce_img_container {
+                    //     width: 22vw;
+                    // }
+                    .introduce_header_title {
+                        white-space: pre-line;
+                    }
+                }
+                .introduce_main {
+                    font-size: 16px;
+                    li {
+                        white-space: pre-line;
+                        br {
+                            display: none;
+                        }
+                    }
+                }
+                .introduce_work_list {
+                    font-size: 16px;
+                    li {
+                        white-space: pre-line;
+                    }
+                }
+            }
+        }
+    }
+
     @keyframes mobile_nav_ani {
         100% {
             opacity: 1;
@@ -388,6 +574,28 @@ header {
         100% {
             opacity: 1;
             transform: translateY(0);
+        }
+    }
+}
+
+/************************* 480 반응형 *******************************/
+@media screen and (max-width: 480px) {
+    .about_wrapper {
+        .about-title {
+            font-size: 24px;
+        }
+        article {
+            .about_introduce {
+                .introduce_header {
+                    font-size: 14px;
+                }
+                .introduce_main {
+                    font-size: 12px;
+                }
+                .introduce_work_list {
+                    font-size: 12px;
+                }
+            }
         }
     }
 }

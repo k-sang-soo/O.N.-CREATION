@@ -273,6 +273,70 @@ header .nav li:last-child {
 
 .about_wrapper {
   height: 100vh;
+  position: relative;
+}
+
+.about_wrapper .about-title {
+  font-size: 41px;
+  font-weight: 700;
+  margin: 1.7em auto;
+  letter-spacing: 0.07em;
+}
+
+.about_wrapper article {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about_wrapper article .about_img_container {
+  width: 656px;
+}
+
+.about_wrapper article .about_img_container img {
+  width: 100%;
+}
+
+.about_wrapper article .about_introduce {
+  margin-left: 4em;
+}
+
+.about_wrapper article .about_introduce .introduce_header {
+  white-space: nowrap;
+  font-size: 24px;
+}
+
+.about_wrapper article .about_introduce .introduce_header .introduce_img_container {
+  width: 12vw;
+}
+
+.about_wrapper article .about_introduce .introduce_header .introduce_header_title {
+  font-weight: 500;
+  margin-bottom: 1.5em;
+}
+
+.about_wrapper article .about_introduce .introduce_main {
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 2.4em;
+  line-height: 1.85;
+  white-space: nowrap;
+}
+
+.about_wrapper article .about_introduce .introduce_work_list {
+  margin-left: 20px;
+  font-size: 19px;
+  font-weight: 300;
+  line-height: 1.85;
+  white-space: nowrap;
+}
+
+.about_wrapper article .about_introduce .introduce_work_list li {
+  list-style: disc outside;
 }
 
 .work_wrapper {
@@ -341,6 +405,22 @@ header .nav li:last-child {
   }
 }
 
+/************************* 1600 반응형 *******************************/
+@media screen and (max-width: 1600px) {
+  .about_wrapper article .about_img_container {
+    width: 500px;
+  }
+  .about_wrapper article .about_introduce .introduce_header {
+    font-size: 18px;
+  }
+  .about_wrapper article .about_introduce .introduce_main {
+    font-size: 15px;
+  }
+  .about_wrapper article .about_introduce .introduce_work_list {
+    font-size: 15px;
+  }
+}
+
 /************************* 1280 반응형 *******************************/
 @media screen and (max-width: 1280px) {
   header {
@@ -352,6 +432,34 @@ header .nav li:last-child {
   }
   header .nav {
     font-size: 14px;
+  }
+  .about_wrapper article .about_img_container {
+    width: 447px;
+  }
+  .about_wrapper article .about_introduce .introduce_header {
+    font-size: 15px;
+  }
+  .about_wrapper article .about_introduce .introduce_main {
+    font-size: 13px;
+  }
+  .about_wrapper article .about_introduce .introduce_work_list {
+    font-size: 13px;
+  }
+}
+
+/************************* 1100 반응형 *******************************/
+@media screen and (max-width: 1100px) {
+  .about_wrapper article .about_img_container {
+    width: 380px;
+  }
+  .about_wrapper article .about_introduce .introduce_header {
+    font-size: 13px;
+  }
+  .about_wrapper article .about_introduce .introduce_main {
+    font-size: 11px;
+  }
+  .about_wrapper article .about_introduce .introduce_work_list {
+    font-size: 11px;
   }
 }
 
@@ -366,6 +474,41 @@ header .nav li:last-child {
   }
   .home_wrapper .home_article .home_img_container {
     width: 46.13vw;
+  }
+  .about_wrapper {
+    height: 100%;
+    padding: 0 24px;
+  }
+  .about_wrapper .about-title {
+    margin: 1.7em 0;
+  }
+  .about_wrapper article {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    position: static;
+  }
+  .about_wrapper article .about_img_container {
+    width: 100%;
+  }
+  .about_wrapper article .about_introduce {
+    margin-left: 0;
+    margin-top: 2em;
+  }
+  .about_wrapper article .about_introduce .introduce_header {
+    font-size: 18px;
+  }
+  .about_wrapper article .about_introduce .introduce_header .introduce_img_container {
+    width: 30vw;
+  }
+  .about_wrapper article .about_introduce .introduce_main {
+    font-size: 16px;
+  }
+  .about_wrapper article .about_introduce .introduce_work_list {
+    font-size: 16px;
   }
 }
 
@@ -452,6 +595,34 @@ header .nav li:last-child {
   .home_wrapper .home_article .mid_line {
     height: 1px;
   }
+  .about_wrapper article .about_img_container {
+    width: 100%;
+  }
+  .about_wrapper article .about_introduce {
+    margin-left: 0;
+    margin-top: 2em;
+  }
+  .about_wrapper article .about_introduce .introduce_header {
+    font-size: 18px;
+  }
+  .about_wrapper article .about_introduce .introduce_header .introduce_header_title {
+    white-space: pre-line;
+  }
+  .about_wrapper article .about_introduce .introduce_main {
+    font-size: 16px;
+  }
+  .about_wrapper article .about_introduce .introduce_main li {
+    white-space: pre-line;
+  }
+  .about_wrapper article .about_introduce .introduce_main li br {
+    display: none;
+  }
+  .about_wrapper article .about_introduce .introduce_work_list {
+    font-size: 16px;
+  }
+  .about_wrapper article .about_introduce .introduce_work_list li {
+    white-space: pre-line;
+  }
   @-webkit-keyframes mobile_nav_ani {
     100% {
       opacity: 1;
@@ -479,6 +650,22 @@ header .nav li:last-child {
       -webkit-transform: translateY(0);
               transform: translateY(0);
     }
+  }
+}
+
+/************************* 480 반응형 *******************************/
+@media screen and (max-width: 480px) {
+  .about_wrapper .about-title {
+    font-size: 24px;
+  }
+  .about_wrapper article .about_introduce .introduce_header {
+    font-size: 14px;
+  }
+  .about_wrapper article .about_introduce .introduce_main {
+    font-size: 12px;
+  }
+  .about_wrapper article .about_introduce .introduce_work_list {
+    font-size: 12px;
   }
 }
 /*# sourceMappingURL=index.css.map */
