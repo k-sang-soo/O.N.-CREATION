@@ -140,7 +140,7 @@ header {
                 width: 10px;
                 height: 10px;
                 border-radius: 50%;
-                background: var(--logo-coral);
+                background: $logo-coral;
             }
         }
 
@@ -275,6 +275,32 @@ header {
 
 .work_wrapper {
     height: 100vh;
+
+    article {
+        max-height: 100vh;
+        overflow: hidden;
+        position: relative;
+        .slide_item {
+            position: relative;
+            min-height: 100vh;
+
+            .slide_item_img {
+                position: absolute;
+                top: 0;
+                img {
+                    width: 100%;
+                }
+            }
+
+            .slide_item_title {
+                position: absolute;
+                top: 260px;
+                left: 156px;
+                font-size: 4.1vw;
+                font-weight: $font-medium;
+            }
+        }
+    }
 }
 
 .contact_wrapper {
@@ -409,7 +435,7 @@ header {
 
     .about_wrapper {
         height: 100%;
-        padding: 0 24px;
+        padding: 24px 24px;
         .about-title {
             margin: 1.7em 0;
         }
@@ -434,6 +460,80 @@ header {
                 }
                 .introduce_work_list {
                     font-size: 16px;
+                }
+            }
+        }
+    }
+
+    .work_wrapper {
+        article {
+            .slide_item {
+                overflow: hidden;
+                .slide_item_img {
+                    position: relative;
+                    width: 100%;
+                    height: 100vh;
+                    img {
+                        position: absolute;
+                        width: auto;
+                        height: 100%;
+                    }
+                }
+                &:nth-child(2) {
+                    img {
+                        right: -560px;
+                    }
+                }
+                &:nth-child(3) {
+                    img {
+                        right: -295px;
+                    }
+                }
+                &:nth-child(4) {
+                    img {
+                        right: -660px;
+                    }
+                }
+                &:nth-child(5) {
+                    img {
+                        right: -320px;
+                    }
+                }
+
+                .slide_item_title {
+                    top: 660px;
+                    left: 24px;
+                    font-size: 7.1vw;
+                }
+            }
+        }
+    }
+}
+
+/************************* 768 반응형 *******************************/
+@media screen and (max-width: 768px) {
+    .work_wrapper {
+        article {
+            .slide_item {
+                &:nth-child(2) {
+                    img {
+                        right: -320px;
+                    }
+                }
+                &:nth-child(3) {
+                    img {
+                        right: -128px;
+                    }
+                }
+                &:nth-child(4) {
+                    img {
+                        right: -460px;
+                    }
+                }
+                &:nth-child(5) {
+                    img {
+                        right: -320px;
+                    }
                 }
             }
         }
@@ -523,6 +623,14 @@ header {
             }
             .mid_line {
                 height: 1px;
+
+                .scroll_indicator {
+                    height: 2px;
+                }
+                .scroll_indicator_effect {
+                    width: 8px;
+                    height: 8px;
+                }
             }
         }
     }
@@ -558,6 +666,21 @@ header {
                     li {
                         white-space: pre-line;
                     }
+                }
+            }
+        }
+    }
+
+    .work_wrapper {
+        article {
+            .slide_item {
+                &:nth-child(4) {
+                    img {
+                        right: -360px;
+                    }
+                }
+                .slide_item_title {
+                    top: 360px;
                 }
             }
         }
