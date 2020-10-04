@@ -1139,6 +1139,9 @@ footer .footer_copyright {
   .contact_wrapper article .contact_how .request_list .bottom_right {
     font-size: 12px;
   }
+  .contact_wrapper article .contact_how .request_list .top_left {
+    margin-right: 8px;
+  }
   .contact_wrapper article .contact_how .email_container .email_title {
     font-size: 15px;
   }
@@ -1149,7 +1152,7 @@ footer .footer_copyright {
     font-size: 13px;
   }
   footer .footer_ci {
-    margin: 18px 0;
+    margin: 24px 0;
     white-space: pre-line;
   }
 }

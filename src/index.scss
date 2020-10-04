@@ -1104,6 +1104,9 @@ footer {
                     .bottom_right {
                         font-size: 12px;
                     }
+                    .top_left {
+                        margin-right: 8px;
+                    }
                 }
                 .email_container {
                     .email_title {
@@ -1123,7 +1126,7 @@ footer {
 
     footer {
         .footer_ci {
-            margin: 18px 0;
+            margin: 24px 0;
             white-space: pre-line;
         }
     }
