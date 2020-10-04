@@ -49,8 +49,8 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    padding-left: 156px;
-    padding-right: 156px;
+    padding: 0 156px;
+    margin: 0 auto;
     z-index: 99;
     .logo_img_container {
         width: 153px;
@@ -220,18 +220,25 @@ header {
     position: relative;
 
     .about-title {
-        font-size: 41px;
+        font-size: 40px;
         font-weight: $font-bold;
-        margin: 1.7em auto;
         letter-spacing: 0.07em;
-        width: 1605px;
+        width: 1632px;
+        padding: 0 24px;
+        position: absolute;
+        left: 50%;
+        top: 15%;
+        transform: translate(-50%);
     }
 
     article {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
+        max-width: 1632px;
         display: flex;
+        padding: 0 24px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         .about_img_container {
             width: 656px;
             img {
@@ -243,19 +250,19 @@ header {
             .introduce_header {
                 white-space: nowrap;
                 font-size: 24px;
+                margin-bottom: 1.2em;
                 .introduce_img_container {
                     width: 12vw;
                 }
                 .introduce_header_title {
                     font-weight: $font-medium;
-                    margin-bottom: 1.5em;
                 }
             }
 
             .introduce_main {
                 font-size: 20px;
                 font-weight: $font-light;
-                margin-bottom: 2.4em;
+                margin-bottom: 2.2em;
                 line-height: 1.85;
                 white-space: nowrap;
             }
@@ -305,22 +312,22 @@ header {
 }
 
 .contact_wrapper {
-    height: 100vh;
     padding: 62px 0;
     position: relative;
 
     .contact_title {
-        width: 1410px;
+        width: 1458px;
         margin: 1.51em auto;
-        font-size: 41px;
+        padding: 0 24px;
+        font-size: 40px;
         font-weight: $font-bold;
         letter-spacing: 0.07em;
     }
     article {
+        width: 1458px;
         display: flex;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
+        margin: 0 auto;
+        padding: 0 24px;
 
         .address_wrapper {
             margin-right: 10.25em;
@@ -335,6 +342,7 @@ header {
                 font-size: 14px;
                 margin-bottom: 2.57em;
                 letter-spacing: 0.7px;
+                white-space: nowrap;
                 li:nth-child(2) {
                     margin-bottom: 1.285em;
                 }
@@ -343,6 +351,14 @@ header {
             .address_kor {
                 font-size: 14px;
                 margin-bottom: 2.571em;
+                line-height: 1.8;
+            }
+
+            .address_map {
+                max-width: 414px;
+                img {
+                    width: 100%;
+                }
             }
         }
 
@@ -359,6 +375,7 @@ header {
                 .kor {
                     font-size: 15px;
                     color: $gray;
+                    line-height: 1.8;
                 }
 
                 .next_sentence {
@@ -383,6 +400,9 @@ header {
                             height: 17px;
                             border: 1.5px solid $gray;
                             margin-right: 0.53em;
+                            .fa-check {
+                                color: $logo-green;
+                            }
                         }
                     }
                 }
@@ -457,7 +477,7 @@ header {
 @media screen and (max-width: 1600px) {
     .about_wrapper {
         .about-title {
-            width: 1228px;
+            width: 1276px;
         }
         article {
             .about_img_container {
@@ -478,12 +498,73 @@ header {
     }
 }
 
+/************************* 1460 반응형 *******************************/
+@media screen and (max-width: 1460px) {
+    .contact_wrapper {
+        .contact_title {
+            width: 1280px;
+        }
+
+        article {
+            width: 1270px;
+            .address_wrapper {
+                margin-right: 100px;
+                .address_title {
+                    font-size: 22px;
+                }
+                .address_eng {
+                    font-size: 12px;
+                }
+                .address_kor {
+                    font-size: 12px;
+                }
+            }
+            .contact_how {
+                .contact_how_title {
+                    .eng {
+                        font-size: 18px;
+                    }
+                    .kor {
+                        font-size: 13px;
+                    }
+                }
+                .request_list {
+                    .top_left,
+                    .bottom_right {
+                        font-size: 13px;
+                        li {
+                            .check_box {
+                                width: 15px;
+                                height: 15px;
+                                .fa-check {
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .email_container {
+                    .email_title {
+                        font-size: 20px;
+                    }
+                    .email_coral {
+                        font-size: 16px;
+                    }
+                    .email_green {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 /************************* 1280 반응형 *******************************/
 
 @media screen and (max-width: 1280px) {
     header {
-        padding-left: 65px;
-        padding-right: 65px;
+        padding-left: 24px;
+        padding-right: 24px;
 
         .logo_img_container {
             width: 136px;
@@ -496,7 +577,7 @@ header {
 
     .about_wrapper {
         .about-title {
-            width: 1086px;
+            width: 1134px;
         }
         article {
             .about_img_container {
@@ -518,11 +599,28 @@ header {
     }
 }
 
+@media screen and (max-width: 1279px) {
+    .contact_wrapper {
+        .contact_title {
+            width: 100%;
+        }
+        article {
+            flex-direction: column;
+            width: 100%;
+
+            .address_wrapper {
+                margin-right: 0;
+                margin-bottom: 38px;
+            }
+        }
+    }
+}
+
 /************************* 1100 반응형 *******************************/
 @media screen and (max-width: 1100px) {
     .about_wrapper {
         .about-title {
-            width: 931px;
+            width: 979px;
         }
         article {
             .about_img_container {
@@ -562,10 +660,12 @@ header {
 
     .about_wrapper {
         height: 100%;
-        padding: 24px 24px;
+        padding: 24px 0;
         .about-title {
+            position: static;
             width: 752px;
             margin: 1.7em 0;
+            transform: none;
         }
         article {
             flex-direction: column;
@@ -632,6 +732,29 @@ header {
                     top: 660px;
                     left: 24px;
                     font-size: 7.1vw;
+                }
+            }
+        }
+    }
+
+    .contact_wrapper {
+        article {
+            .address_wrapper {
+                .address_title {
+                    font-size: 24px;
+                }
+                .address_eng {
+                    font-size: 14px;
+                }
+                .address_kor {
+                    font-size: 14px;
+                }
+            }
+            .contact_how {
+                .contact_how_title {
+                    .kor {
+                        font-size: 14px;
+                    }
                 }
             }
         }
@@ -774,7 +897,7 @@ header {
 
     .about_wrapper {
         .about-title {
-            width: 600px;
+            width: 592px;
         }
         article {
             .about_img_container {
@@ -829,6 +952,45 @@ header {
         }
     }
 
+    .contact_wrapper {
+        article {
+            .address_wrapper {
+                .address_eng {
+                    br {
+                        display: none;
+                    }
+                    li {
+                        white-space: pre-line;
+                    }
+                }
+                .address_map {
+                    width: 320px;
+                }
+            }
+            .contact_how {
+                .contact_how_title {
+                    br {
+                        display: none;
+                    }
+                    li {
+                        white-space: pre-line;
+                    }
+                }
+                .request_list {
+                    .top_left,
+                    .bottom_right {
+                        display: inline-flex;
+                        flex-direction: column;
+                        li {
+                            margin-bottom: 0.54em;
+                            margin-right: 0 !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     @keyframes mobile_nav_ani {
         100% {
             opacity: 1;
@@ -849,7 +1011,7 @@ header {
     .about_wrapper {
         .about-title {
             font-size: 24px;
-            width: 432px;
+            width: 312px;
         }
         article {
             .about_introduce {
@@ -861,6 +1023,56 @@ header {
                 }
                 .introduce_work_list {
                     font-size: 12px;
+                }
+            }
+        }
+    }
+
+    .contact_wrapper {
+        .contact_title {
+            font-size: 24px;
+        }
+        article {
+            .address_wrapper {
+                .address_title {
+                    font-size: 20px;
+                }
+
+                .address_eng {
+                    font-size: 12px;
+                }
+                .address_kor {
+                    font-size: 12px;
+                }
+            }
+
+            .contact_how {
+                .contact_how_title {
+                    .eng {
+                        font-size: 14px;
+                    }
+                    .kor {
+                        font-size: 12px;
+                    }
+                }
+                .request_list {
+                    margin-bottom: 30px;
+                    .top_left,
+                    .bottom_right {
+                        font-size: 12px;
+                    }
+                }
+                .email_container {
+                    .email_title {
+                        font-size: 15px;
+                    }
+
+                    .email_coral {
+                        font-size: 13px;
+                    }
+                    .email_green {
+                        font-size: 13px;
+                    }
                 }
             }
         }
