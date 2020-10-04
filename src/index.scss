@@ -445,6 +445,32 @@ header {
     }
 }
 
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 156px;
+    border-top: 1px solid $gray;
+    div {
+        text-align: center;
+        padding: 0 16px;
+    }
+    .footer_img_container {
+        width: 153px;
+        img {
+            width: 100%;
+        }
+    }
+
+    .footer_ci {
+        font-size: 12px;
+        color: $gray;
+    }
+
+    .footer_copyright {
+        font-size: 12px;
+    }
+}
+
 /********** animation *********/
 
 @keyframes texts {
@@ -597,6 +623,13 @@ header {
             }
         }
     }
+
+    footer {
+        padding: 30px 0;
+        .footer_img_container {
+            width: 136px;
+        }
+    }
 }
 
 @media screen and (max-width: 1279px) {
@@ -641,8 +674,8 @@ header {
     }
 }
 
-/************************* 800 반응형 *******************************/
-@media screen and (max-width: 800px) {
+/************************* 980 반응형 *******************************/
+@media screen and (max-width: 980px) {
     header {
         padding-left: 24px;
         padding-right: 24px;
@@ -738,6 +771,8 @@ header {
     }
 
     .contact_wrapper {
+        padding: 0;
+        padding-bottom: 62px;
         article {
             .address_wrapper {
                 .address_title {
@@ -757,6 +792,14 @@ header {
                     }
                 }
             }
+        }
+    }
+    footer {
+        padding: 20px 0;
+        flex-direction: column;
+        align-items: center;
+        .footer_ci {
+            margin: 32px 0;
         }
     }
 }
@@ -1075,6 +1118,13 @@ header {
                     }
                 }
             }
+        }
+    }
+
+    footer {
+        .footer_ci {
+            margin: 18px 0;
+            white-space: pre-line;
         }
     }
 }

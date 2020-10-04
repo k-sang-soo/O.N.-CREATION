@@ -544,6 +544,39 @@ header .nav li:last-child {
   color: #4aa389;
 }
 
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 30px 156px;
+  border-top: 1px solid #7c7d80;
+}
+
+footer div {
+  text-align: center;
+  padding: 0 16px;
+}
+
+footer .footer_img_container {
+  width: 153px;
+}
+
+footer .footer_img_container img {
+  width: 100%;
+}
+
+footer .footer_ci {
+  font-size: 12px;
+  color: #7c7d80;
+}
+
+footer .footer_copyright {
+  font-size: 12px;
+}
+
 /********** animation *********/
 @-webkit-keyframes texts {
   100% {
@@ -698,6 +731,12 @@ header .nav li:last-child {
   .about_wrapper article .about_introduce .introduce_work_list {
     font-size: 13px;
   }
+  footer {
+    padding: 30px 0;
+  }
+  footer .footer_img_container {
+    width: 136px;
+  }
 }
 
 @media screen and (max-width: 1279px) {
@@ -736,8 +775,8 @@ header .nav li:last-child {
   }
 }
 
-/************************* 800 반응형 *******************************/
-@media screen and (max-width: 800px) {
+/************************* 980 반응형 *******************************/
+@media screen and (max-width: 980px) {
   header {
     padding-left: 24px;
     padding-right: 24px;
@@ -817,6 +856,10 @@ header .nav li:last-child {
     left: 24px;
     font-size: 7.1vw;
   }
+  .contact_wrapper {
+    padding: 0;
+    padding-bottom: 62px;
+  }
   .contact_wrapper article .address_wrapper .address_title {
     font-size: 24px;
   }
@@ -828,6 +871,19 @@ header .nav li:last-child {
   }
   .contact_wrapper article .contact_how .contact_how_title .kor {
     font-size: 14px;
+  }
+  footer {
+    padding: 20px 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer .footer_ci {
+    margin: 32px 0;
   }
 }
 
@@ -1091,6 +1147,10 @@ header .nav li:last-child {
   }
   .contact_wrapper article .contact_how .email_container .email_green {
     font-size: 13px;
+  }
+  footer .footer_ci {
+    margin: 18px 0;
+    white-space: pre-line;
   }
 }
 /*# sourceMappingURL=index.css.map */
