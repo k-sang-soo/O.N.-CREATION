@@ -281,6 +281,7 @@ header .nav li:last-child {
   font-weight: 700;
   margin: 1.7em auto;
   letter-spacing: 0.07em;
+  width: 1605px;
 }
 
 .about_wrapper article {
@@ -373,6 +374,151 @@ header .nav li:last-child {
 
 .contact_wrapper {
   height: 100vh;
+  padding: 62px 0;
+  position: relative;
+}
+
+.contact_wrapper .contact_title {
+  width: 1410px;
+  margin: 1.51em auto;
+  font-size: 41px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+}
+
+.contact_wrapper article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.contact_wrapper article .address_wrapper {
+  margin-right: 10.25em;
+}
+
+.contact_wrapper article .address_wrapper .address_title {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 0.95em;
+}
+
+.contact_wrapper article .address_wrapper .address_eng {
+  font-size: 14px;
+  margin-bottom: 2.57em;
+  letter-spacing: 0.7px;
+}
+
+.contact_wrapper article .address_wrapper .address_eng li:nth-child(2) {
+  margin-bottom: 1.285em;
+}
+
+.contact_wrapper article .address_wrapper .address_kor {
+  font-size: 14px;
+  margin-bottom: 2.571em;
+}
+
+.contact_wrapper article .contact_how {
+  white-space: nowrap;
+}
+
+.contact_wrapper article .contact_how .contact_how_title {
+  margin-bottom: 2.25em;
+}
+
+.contact_wrapper article .contact_how .contact_how_title .eng {
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 0.8em;
+}
+
+.contact_wrapper article .contact_how .contact_how_title .kor {
+  font-size: 15px;
+  color: #7c7d80;
+}
+
+.contact_wrapper article .contact_how .contact_how_title .next_sentence {
+  margin-bottom: 4.3em;
+}
+
+.contact_wrapper article .contact_how .request_list {
+  margin-bottom: 5em;
+}
+
+.contact_wrapper article .contact_how .request_list .top_left,
+.contact_wrapper article .contact_how .request_list .bottom_right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 15px;
+}
+
+.contact_wrapper article .contact_how .request_list .top_left li,
+.contact_wrapper article .contact_how .request_list .bottom_right li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contact_wrapper article .contact_how .request_list .top_left li .check_box,
+.contact_wrapper article .contact_how .request_list .bottom_right li .check_box {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 17px;
+  height: 17px;
+  border: 1.5px solid #7c7d80;
+  margin-right: 0.53em;
+}
+
+.contact_wrapper article .contact_how .request_list .top_left {
+  margin-bottom: 0.4em;
+}
+
+.contact_wrapper article .contact_how .request_list .top_left li:nth-child(1) {
+  margin-right: 6.67em;
+}
+
+.contact_wrapper article .contact_how .request_list .top_left li:nth-child(2) {
+  margin-right: 2.13em;
+}
+
+.contact_wrapper article .contact_how .request_list .top_left li:nth-child(3) {
+  margin-right: 3.8em;
+}
+
+.contact_wrapper article .contact_how .request_list .bottom_right li {
+  margin-right: 1.2em;
+}
+
+.contact_wrapper article .contact_how .email_container {
+  font-weight: 500;
+}
+
+.contact_wrapper article .contact_how .email_container .email_title {
+  font-size: 22px;
+}
+
+.contact_wrapper article .contact_how .email_container .email_coral {
+  font-size: 18px;
+  color: #da6d75;
+}
+
+.contact_wrapper article .contact_how .email_container .email_green {
+  font-size: 18px;
+  color: #4aa389;
 }
 
 /********** animation *********/
@@ -435,6 +581,9 @@ header .nav li:last-child {
 
 /************************* 1600 반응형 *******************************/
 @media screen and (max-width: 1600px) {
+  .about_wrapper .about-title {
+    width: 1228px;
+  }
   .about_wrapper article .about_img_container {
     width: 500px;
   }
@@ -461,6 +610,9 @@ header .nav li:last-child {
   header .nav {
     font-size: 14px;
   }
+  .about_wrapper .about-title {
+    width: 1086px;
+  }
   .about_wrapper article .about_img_container {
     width: 447px;
   }
@@ -477,6 +629,9 @@ header .nav li:last-child {
 
 /************************* 1100 반응형 *******************************/
 @media screen and (max-width: 1100px) {
+  .about_wrapper .about-title {
+    width: 931px;
+  }
   .about_wrapper article .about_img_container {
     width: 380px;
   }
@@ -508,6 +663,7 @@ header .nav li:last-child {
     padding: 24px 24px;
   }
   .about_wrapper .about-title {
+    width: 752px;
     margin: 1.7em 0;
   }
   .about_wrapper article {
@@ -572,6 +728,9 @@ header .nav li:last-child {
 
 /************************* 768 반응형 *******************************/
 @media screen and (max-width: 768px) {
+  .about_wrapper .about-title {
+    width: 715px;
+  }
   .work_wrapper article .slide_item:nth-child(2) img {
     right: -320px;
   }
@@ -679,6 +838,9 @@ header .nav li:last-child {
     width: 8px;
     height: 8px;
   }
+  .about_wrapper .about-title {
+    width: 600px;
+  }
   .about_wrapper article .about_img_container {
     width: 100%;
   }
@@ -750,6 +912,7 @@ header .nav li:last-child {
 @media screen and (max-width: 480px) {
   .about_wrapper .about-title {
     font-size: 24px;
+    width: 432px;
   }
   .about_wrapper article .about_introduce .introduce_header {
     font-size: 14px;

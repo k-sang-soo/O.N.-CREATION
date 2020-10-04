@@ -17,7 +17,7 @@ window.addEventListener('load', () => {
     const aboutTitleStandard = document.querySelector('.about-article');
     let aboutTitleLeft = aboutTitleStandard.offsetWidth;
 
-    aboutTitle.style.width = `${aboutTitleLeft}px`;
+    // aboutTitle.style.width = `${aboutTitleLeft}px`;
 
     window.addEventListener('scroll', () => {
         let winY = window.pageYOffset;
