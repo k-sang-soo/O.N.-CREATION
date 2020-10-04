@@ -12,12 +12,28 @@ window.addEventListener('load', () => {
     const mobileNavAni = document.querySelectorAll('.mobile_nav_icon div');
     const navList = document.querySelector('.nav');
     const navListAni = document.querySelectorAll('.nav > li');
+    const scrollNav = document.querySelectorAll('.nav li a');
 
-    const aboutTitle = document.querySelector('.about-title');
-    const aboutTitleStandard = document.querySelector('.about-article');
-    let aboutTitleLeft = aboutTitleStandard.offsetWidth;
-
-    // aboutTitle.style.width = `${aboutTitleLeft}px`;
+    scrollNav.forEach((el, index) => {
+        el.addEventListener('click', () => {
+            switch (index) {
+                case 0:
+                    navScrollEffect('.home_wrapper');
+                    break;
+                case 1:
+                    navScrollEffect('.about_wrapper');
+                    break;
+                case 2:
+                    navScrollEffect('.work_wrapper');
+                    break;
+                case 3:
+                    navScrollEffect('.contact_wrapper');
+                    break;
+                default:
+                    break;
+            }
+        });
+    });
 
     window.addEventListener('scroll', () => {
         let winY = window.pageYOffset;
@@ -103,4 +119,13 @@ function scrollIndicator(e) {
     if (scrollIndicatorEffect.style.left <= '0.5%') {
         scrollIndicatorEffect.style.left = '-15px';
     }
+}
+
+function navScrollEffect(target) {
+    const targetTop = document.querySelector(target).offsetTop;
+
+    window.scrollTo({
+        top: targetTop,
+        behavior: 'smooth',
+    });
 }
