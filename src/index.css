@@ -544,7 +544,7 @@ header .nav li:last-child {
   .work_wrapper article .slide_item .slide_item_img {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 1280px;
   }
   .work_wrapper article .slide_item .slide_item_img img {
     position: absolute;
@@ -583,6 +583,9 @@ header .nav li:last-child {
   }
   .work_wrapper article .slide_item:nth-child(5) img {
     right: -320px;
+  }
+  .work_wrapper article .slide_item .slide_item_img {
+    height: 1024px;
   }
 }
 
@@ -706,6 +709,9 @@ header .nav li:last-child {
   }
   .work_wrapper article .slide_item:nth-child(4) img {
     right: -360px;
+  }
+  .work_wrapper article .slide_item .slide_item_img {
+    height: 640px;
   }
   .work_wrapper article .slide_item .slide_item_title {
     top: 360px;
