@@ -274,7 +274,19 @@ header .nav li:last-child {
 
 .about_wrapper {
   height: 100vh;
-  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .about_wrapper .about-title {
@@ -283,11 +295,7 @@ header .nav li:last-child {
   letter-spacing: 0.07em;
   width: 1632px;
   padding: 0 24px;
-  position: absolute;
-  left: 50%;
-  top: 15%;
-  -webkit-transform: translate(-50%);
-          transform: translate(-50%);
+  padding-bottom: 1.5em;
 }
 
 .about_wrapper article {
@@ -296,11 +304,6 @@ header .nav li:last-child {
   display: -ms-flexbox;
   display: flex;
   padding: 0 24px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
 }
 
 .about_wrapper article .about_img_container {
@@ -546,36 +549,13 @@ header .nav li:last-child {
 }
 
 footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   padding: 30px 156px;
   border-top: 1px solid #7c7d80;
 }
 
-footer div {
-  text-align: center;
-  padding: 0 16px;
-}
-
-footer .footer_img_container {
-  width: 153px;
-}
-
-footer .footer_img_container img {
-  width: 100%;
-}
-
-footer .footer_ci {
-  font-size: 12px;
-  color: #7c7d80;
-}
-
 footer .footer_copyright {
   font-size: 12px;
+  text-align: center;
 }
 
 /********** animation *********/
@@ -735,9 +715,6 @@ footer .footer_copyright {
   footer {
     padding: 30px 0;
   }
-  footer .footer_img_container {
-    width: 136px;
-  }
 }
 
 @media screen and (max-width: 1279px) {
@@ -790,22 +767,17 @@ footer .footer_copyright {
   }
   .about_wrapper {
     height: 100%;
-    padding: 24px 0;
+    padding: 68px 0;
   }
   .about_wrapper .about-title {
     position: static;
     width: 752px;
-    margin: 1.7em 0;
-    -webkit-transform: none;
-            transform: none;
   }
   .about_wrapper article {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
     position: static;
   }
   .about_wrapper article .about_img_container {
@@ -879,23 +851,13 @@ footer .footer_copyright {
   }
   footer {
     padding: 20px 0;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  footer .footer_ci {
-    margin: 32px 0;
   }
 }
 
-/************************* 768 반응형 *******************************/
-@media screen and (max-width: 768px) {
+/************************* 800 반응형 *******************************/
+@media screen and (max-width: 800px) {
   .about_wrapper .about-title {
-    width: 715px;
+    width: 756px;
   }
   .work_wrapper article .slide_item:nth-child(2) img {
     right: -320px;
@@ -917,8 +879,8 @@ footer .footer_copyright {
   }
 }
 
-/************************* 640 반응형 *******************************/
-@media screen and (max-width: 640px) {
+/************************* 760 반응형 *******************************/
+@media screen and (max-width: 760px) {
   header {
     padding-right: 8px;
     padding-left: 20px;
@@ -1009,7 +971,7 @@ footer .footer_copyright {
     height: 8px;
   }
   .about_wrapper .about-title {
-    width: 592px;
+    width: 704px;
   }
   .about_wrapper article {
     padding: 0 20px;
@@ -1118,11 +1080,17 @@ footer .footer_copyright {
   }
 }
 
+/************************* 700 반응형 *******************************/
+@media screen and (max-width: 700px) {
+  .about_wrapper .about-title {
+    width: 100%;
+  }
+}
+
 /************************* 480 반응형 *******************************/
 @media screen and (max-width: 480px) {
   .about_wrapper .about-title {
     font-size: 24px;
-    width: 312px;
   }
   .about_wrapper article .about_introduce .introduce_header {
     font-size: 14px;
@@ -1173,10 +1141,6 @@ footer .footer_copyright {
   }
   .contact_wrapper article .contact_how .email_container .email_green {
     font-size: 13px;
-  }
-  footer .footer_ci {
-    margin: 24px 0;
-    white-space: pre-line;
   }
 }
 /*# sourceMappingURL=index.css.map */

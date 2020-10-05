@@ -215,7 +215,10 @@ header {
 
 .about_wrapper {
     height: 100vh;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
     .about-title {
         font-size: 40px;
@@ -223,20 +226,13 @@ header {
         letter-spacing: 0.07em;
         width: 1632px;
         padding: 0 24px;
-        position: absolute;
-        left: 50%;
-        top: 15%;
-        transform: translate(-50%);
+        padding-bottom: 1.5em;
     }
 
     article {
         max-width: 1632px;
         display: flex;
         padding: 0 24px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         .about_img_container {
             width: 656px;
             img {
@@ -446,28 +442,12 @@ header {
 }
 
 footer {
-    display: flex;
-    justify-content: space-between;
     padding: 30px 156px;
     border-top: 1px solid $gray;
-    div {
-        text-align: center;
-        padding: 0 16px;
-    }
-    .footer_img_container {
-        width: 153px;
-        img {
-            width: 100%;
-        }
-    }
-
-    .footer_ci {
-        font-size: 12px;
-        color: $gray;
-    }
 
     .footer_copyright {
         font-size: 12px;
+        text-align: center;
     }
 }
 
@@ -626,9 +606,6 @@ footer {
 
     footer {
         padding: 30px 0;
-        .footer_img_container {
-            width: 136px;
-        }
     }
 }
 
@@ -693,16 +670,13 @@ footer {
 
     .about_wrapper {
         height: 100%;
-        padding: 24px 0;
+        padding: 68px 0;
         .about-title {
             position: static;
             width: 752px;
-            margin: 1.7em 0;
-            transform: none;
         }
         article {
             flex-direction: column;
-            transform: translateX(0);
             position: static;
             .about_img_container {
                 width: 100%;
@@ -798,19 +772,14 @@ footer {
     }
     footer {
         padding: 20px 0;
-        flex-direction: column;
-        align-items: center;
-        .footer_ci {
-            margin: 32px 0;
-        }
     }
 }
 
-/************************* 768 반응형 *******************************/
-@media screen and (max-width: 768px) {
+/************************* 800 반응형 *******************************/
+@media screen and (max-width: 800px) {
     .about_wrapper {
         .about-title {
-            width: 715px;
+            width: 756px;
         }
     }
 
@@ -848,8 +817,8 @@ footer {
     }
 }
 
-/************************* 640 반응형 *******************************/
-@media screen and (max-width: 640px) {
+/************************* 760 반응형 *******************************/
+@media screen and (max-width: 760px) {
     header {
         padding-right: 8px;
         padding-left: 20px;
@@ -946,7 +915,7 @@ footer {
 
     .about_wrapper {
         .about-title {
-            width: 592px;
+            width: 704px;
         }
         article {
             padding: 0 20px;
@@ -958,9 +927,7 @@ footer {
                 margin-top: 2em;
                 .introduce_header {
                     font-size: 18px;
-                    // .introduce_img_container {
-                    //     width: 22vw;
-                    // }
+
                     .introduce_header_title {
                         white-space: pre-line;
                     }
@@ -1066,12 +1033,19 @@ footer {
     }
 }
 
+/************************* 700 반응형 *******************************/
+@media screen and (max-width: 700px) {
+    .about_wrapper {
+        .about-title {
+            width: 100%;
+        }
+    }
+}
 /************************* 480 반응형 *******************************/
 @media screen and (max-width: 480px) {
     .about_wrapper {
         .about-title {
             font-size: 24px;
-            width: 312px;
         }
         article {
             .about_introduce {
@@ -1140,13 +1114,6 @@ footer {
                     }
                 }
             }
-        }
-    }
-
-    footer {
-        .footer_ci {
-            margin: 24px 0;
-            white-space: pre-line;
         }
     }
 }

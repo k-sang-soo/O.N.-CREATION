@@ -3,7 +3,7 @@ window.addEventListener('load', () => {
     
     midLineAnimation()
     imgChange();
-    slider();
+    // slider();
     naviScrollAnimation();
     mobileClickEvent();
     window.addEventListener('scroll', scrollIndicator);
