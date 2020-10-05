@@ -759,12 +759,12 @@ footer {
                 }
                 &:nth-child(5) {
                     img {
-                        right: -320px;
+                        right: 0;
                     }
                 }
 
                 .slide_item_title {
-                    top: 660px;
+                    top: 860px;
                     left: 24px;
                     font-size: 7.1vw;
                 }
@@ -834,11 +834,14 @@ footer {
                 }
                 &:nth-child(5) {
                     img {
-                        right: -320px;
+                        width: 100%;
                     }
                 }
                 .slide_item_img {
                     height: 1024px;
+                }
+                .slide_item_title {
+                    top: 700px;
                 }
             }
         }
@@ -990,12 +993,18 @@ footer {
                         right: -360px;
                     }
                 }
+
+                &:nth-child(5) {
+                    img {
+                        width: auto;
+                    }
+                }
                 .slide_item_img {
                     min-height: 640px;
                     max-height: 640px;
                 }
                 .slide_item_title {
-                    top: 400px;
+                    top: 430px;
                 }
             }
         }
