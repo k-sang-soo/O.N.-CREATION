@@ -1,11 +1,9 @@
 'use strict';
 window.addEventListener('load', () => {
-    
-    midLineAnimation()
+    midLineAnimation();
     imgChange();
-    // slider();
+    slider();
     naviScrollAnimation();
     mobileClickEvent();
     window.addEventListener('scroll', scrollIndicator);
-    
 });
