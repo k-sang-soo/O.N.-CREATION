@@ -350,6 +350,7 @@ header .nav li:last-child {
 
 .work_wrapper {
   height: 100vh;
+  pointer-events: none;
 }
 
 .work_wrapper article {
