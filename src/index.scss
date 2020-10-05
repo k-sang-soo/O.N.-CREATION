@@ -269,13 +269,14 @@ header {
             }
 
             .introduce_work_list {
-                margin-left: 20px;
                 font-size: 19px;
                 font-weight: $font-light;
                 line-height: 1.85;
                 white-space: nowrap;
                 li {
-                    list-style: disc outside;
+                    br {
+                        display: none;
+                    }
                 }
             }
         }
@@ -971,7 +972,10 @@ footer {
                 .introduce_work_list {
                     font-size: 16px;
                     li {
-                        white-space: pre-line;
+                        white-space: pre;
+                        br {
+                            display: inline-block;
+                        }
                     }
                 }
             }
@@ -987,10 +991,11 @@ footer {
                     }
                 }
                 .slide_item_img {
-                    height: 640px;
+                    min-height: 640px;
+                    max-height: 640px;
                 }
                 .slide_item_title {
-                    top: 360px;
+                    top: 400px;
                 }
             }
         }
