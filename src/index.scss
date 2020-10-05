@@ -7,10 +7,7 @@ $gray: #7c7d80;
 $font-light: 300;
 $font-regular: 400;
 $font-medium: 500;
-$font-semi-bold: 600;
 $font-bold: 700;
-$font-extra-bold: 800;
-$font-black: 900;
 
 /********************** 초기화 코드 **********************/
 * {
@@ -729,8 +726,10 @@ footer {
     }
 
     .work_wrapper {
+        height: auto;
         article {
             .slide_item {
+                min-height: auto;
                 overflow: hidden;
                 .slide_item_img {
                     position: relative;
@@ -851,7 +850,8 @@ footer {
 /************************* 640 반응형 *******************************/
 @media screen and (max-width: 640px) {
     header {
-        padding-right: 12px;
+        padding-right: 8px;
+        padding-left: 20px;
         height: 50px;
 
         .logo_img_container {
@@ -948,6 +948,7 @@ footer {
             width: 592px;
         }
         article {
+            padding: 0 20px;
             .about_img_container {
                 width: 100%;
             }
@@ -1089,11 +1090,13 @@ footer {
     .contact_wrapper {
         .contact_title {
             font-size: 24px;
+            padding: 0 20px;
         }
         article {
+            padding: 0 20px;
             .address_wrapper {
                 .address_title {
-                    font-size: 20px;
+                    font-size: 24px;
                 }
 
                 .address_eng {
