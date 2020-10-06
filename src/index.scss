@@ -94,6 +94,30 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+
+    .move_scroll_container {
+        width: 20px;
+        height: 30px;
+        border-radius: 10px;
+        border: 1px solid $white;
+        position: absolute;
+        left: 50%;
+        bottom: 5%;
+        transform: translateX(-50%);
+        opacity: 0;
+        animation: order5-mouse 400ms linear forwards;
+        animation-delay: 1500ms;
+        .move_scroll_circle {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: $white;
+            opacity: 1;
+            margin: 4px auto 0 auto;
+            animation: scroll-move 1000ms infinite linear;
+        }
+    }
 
     .home_article {
         width: 100%;
@@ -478,6 +502,19 @@ footer {
     100% {
         transform: translateY(0);
         opacity: 1;
+    }
+}
+
+@keyframes order5-mouse {
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes scroll-move {
+    100% {
+        transform: translateY(10px);
+        opacity: 0;
     }
 }
 
@@ -1061,6 +1098,18 @@ footer {
 }
 /************************* 480 반응형 *******************************/
 @media screen and (max-width: 480px) {
+    .home_wrapper {
+        .move_scroll_container {
+            width: 18px;
+            height: 28px;
+
+            .move_scroll_circle {
+                width: 5px;
+                height: 5px;
+            }
+        }
+    }
+
     .about_wrapper {
         .about-title {
             font-size: 24px;

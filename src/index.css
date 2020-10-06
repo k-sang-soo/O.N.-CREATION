@@ -107,6 +107,35 @@ header .nav li:last-child {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+}
+
+.home_wrapper .move_scroll_container {
+  width: 20px;
+  height: 30px;
+  border-radius: 10px;
+  border: 1px solid #f9f9f9;
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  opacity: 0;
+  -webkit-animation: order5-mouse 400ms linear forwards;
+          animation: order5-mouse 400ms linear forwards;
+  -webkit-animation-delay: 1500ms;
+          animation-delay: 1500ms;
+}
+
+.home_wrapper .move_scroll_container .move_scroll_circle {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #f9f9f9;
+  opacity: 1;
+  margin: 4px auto 0 auto;
+  -webkit-animation: scroll-move 1000ms infinite linear;
+          animation: scroll-move 1000ms infinite linear;
 }
 
 .home_wrapper .home_article {
@@ -614,6 +643,34 @@ footer .footer_copyright {
   }
 }
 
+@-webkit-keyframes order5-mouse {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes order5-mouse {
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes scroll-move {
+  100% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+    opacity: 0;
+  }
+}
+
+@keyframes scroll-move {
+  100% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+    opacity: 0;
+  }
+}
+
 /************************* 1600 반응형 *******************************/
 @media screen and (max-width: 1600px) {
   .about_wrapper .about-title {
@@ -1114,6 +1171,14 @@ footer .footer_copyright {
 
 /************************* 480 반응형 *******************************/
 @media screen and (max-width: 480px) {
+  .home_wrapper .move_scroll_container {
+    width: 18px;
+    height: 28px;
+  }
+  .home_wrapper .move_scroll_container .move_scroll_circle {
+    width: 5px;
+    height: 5px;
+  }
   .about_wrapper .about-title {
     font-size: 24px;
   }
