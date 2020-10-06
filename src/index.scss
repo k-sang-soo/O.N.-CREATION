@@ -442,7 +442,7 @@ header {
                 }
 
                 .bottom_right {
-                    margin-bottom: 11em;
+                    margin-bottom: 8.6em;
                     li {
                         margin-right: 1.2em;
                     }
@@ -461,6 +461,9 @@ header {
                 .email_green {
                     font-size: 22px;
                     color: $logo-green;
+                }
+                .email_sns {
+                    font-size: 26px;
                 }
             }
         }
@@ -588,7 +591,7 @@ footer {
                         }
                     }
                     .bottom_right {
-                        margin-bottom: 8em;
+                        margin-bottom: 6em;
                     }
                 }
                 .email_container {
@@ -600,6 +603,9 @@ footer {
                     }
                     .email_green {
                         font-size: 18px;
+                    }
+                    .email_sns {
+                        font-size: 24px;
                     }
                 }
             }
@@ -683,9 +689,17 @@ footer {
                             margin-bottom: 8px;
                         }
                     }
+                    .top_left {
+                        margin-right: 24px;
+                        li:nth-child(1),
+                        li:nth-child(2),
+                        li:nth-child(3) {
+                            margin-right: 0;
+                        }
+                    }
 
                     .bottom_right {
-                        margin-bottom: 4em;
+                        margin-bottom: 2.1em;
                     }
                 }
                 .email_container {
@@ -699,6 +713,10 @@ footer {
 
                     .email_coral {
                         font-size: 16px;
+                    }
+
+                    .email_sns {
+                        font-size: 20px;
                     }
                 }
             }
@@ -862,6 +880,11 @@ footer {
                 .contact_how_title {
                     .kor {
                         font-size: 14px;
+                    }
+                }
+                .request_list {
+                    .top_left {
+                        margin-right: 8px;
                     }
                 }
             }
