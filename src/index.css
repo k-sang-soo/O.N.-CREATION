@@ -356,6 +356,10 @@ header .nav li:last-child {
   display: none;
 }
 
+.work_wrapper {
+  pointer-events: none;
+}
+
 .work_wrapper article {
   max-height: 100vh;
   overflow: hidden;
