@@ -178,6 +178,11 @@ header .nav li:last-child {
   white-space: nowrap;
 }
 
+.home_wrapper .home_article .ideology .ideology_green,
+.home_wrapper .home_article .ideology .ideology_coral {
+  font-weight: 500;
+}
+
 .home_wrapper .home_article .ideology .ideology_green {
   color: #4aa389;
 }
@@ -414,12 +419,12 @@ header .nav li:last-child {
 }
 
 .contact_wrapper article .address_wrapper .address_eng li:nth-child(2) {
-  margin-bottom: 1.285em;
+  margin-bottom: 2.57em;
 }
 
 .contact_wrapper article .address_wrapper .address_kor {
   font-size: 14px;
-  margin-bottom: 2.571em;
+  margin-bottom: 3.571em;
   line-height: 1.8;
 }
 
@@ -435,10 +440,6 @@ header .nav li:last-child {
   white-space: nowrap;
 }
 
-.contact_wrapper article .contact_how .contact_how_title {
-  margin-bottom: 2.25em;
-}
-
 .contact_wrapper article .contact_how .contact_how_title .eng {
   font-weight: 500;
   font-size: 20px;
@@ -452,11 +453,11 @@ header .nav li:last-child {
 }
 
 .contact_wrapper article .contact_how .contact_how_title .next_sentence {
-  margin-bottom: 4.3em;
+  margin-bottom: 3.3em;
 }
 
-.contact_wrapper article .contact_how .request_list {
-  margin-bottom: 5em;
+.contact_wrapper article .contact_how .contact_how_title .next_sentence_two {
+  margin-bottom: 3em;
 }
 
 .contact_wrapper article .contact_how .request_list .top_left,
@@ -515,6 +516,10 @@ header .nav li:last-child {
   margin-right: 3.8em;
 }
 
+.contact_wrapper article .contact_how .request_list .bottom_right {
+  margin-bottom: 11em;
+}
+
 .contact_wrapper article .contact_how .request_list .bottom_right li {
   margin-right: 1.2em;
 }
@@ -524,16 +529,16 @@ header .nav li:last-child {
 }
 
 .contact_wrapper article .contact_how .email_container .email_title {
-  font-size: 22px;
+  font-size: 26px;
 }
 
 .contact_wrapper article .contact_how .email_container .email_coral {
-  font-size: 18px;
+  font-size: 22px;
   color: #da6d75;
 }
 
 .contact_wrapper article .contact_how .email_container .email_green {
-  font-size: 18px;
+  font-size: 22px;
   color: #4aa389;
 }
 
@@ -627,13 +632,13 @@ footer .footer_copyright {
 /************************* 1460 반응형 *******************************/
 @media screen and (max-width: 1460px) {
   .contact_wrapper .contact_title {
-    width: 1280px;
+    width: 1146px;
   }
   .contact_wrapper article {
-    width: 1270px;
+    width: 1146px;
   }
   .contact_wrapper article .address_wrapper {
-    margin-right: 100px;
+    margin-right: 80px;
   }
   .contact_wrapper article .address_wrapper .address_title {
     font-size: 22px;
@@ -663,14 +668,17 @@ footer .footer_copyright {
   .contact_wrapper article .contact_how .request_list .bottom_right li .check_box .fa-check {
     font-size: 12px;
   }
+  .contact_wrapper article .contact_how .request_list .bottom_right {
+    margin-bottom: 8em;
+  }
   .contact_wrapper article .contact_how .email_container .email_title {
-    font-size: 20px;
+    font-size: 22px;
   }
   .contact_wrapper article .contact_how .email_container .email_coral {
-    font-size: 16px;
+    font-size: 18px;
   }
   .contact_wrapper article .contact_how .email_container .email_green {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 
@@ -687,6 +695,7 @@ footer .footer_copyright {
     font-size: 14px;
   }
   .about_wrapper .about-title {
+    font-size: 32px;
     width: 1134px;
   }
   .about_wrapper article .about_img_container {
@@ -701,30 +710,58 @@ footer .footer_copyright {
   .about_wrapper article .about_introduce .introduce_work_list {
     font-size: 13px;
   }
+  .contact_wrapper .contact_title {
+    font-size: 32px;
+    width: 1020px;
+  }
+  .contact_wrapper article {
+    width: 1020px;
+  }
+  .contact_wrapper article .address_wrapper .address_title {
+    font-size: 20px;
+  }
+  .contact_wrapper article .contact_how .contact_how_title .eng {
+    font-size: 15px;
+  }
+  .contact_wrapper article .contact_how .contact_how_title .kor {
+    font-size: 12px;
+  }
+  .contact_wrapper article .contact_how .contact_how_title .next_sentence {
+    margin-bottom: 5.3em;
+  }
+  .contact_wrapper article .contact_how .request_list .top_left,
+  .contact_wrapper article .contact_how .request_list .bottom_right {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+  .contact_wrapper article .contact_how .request_list .top_left li,
+  .contact_wrapper article .contact_how .request_list .bottom_right li {
+    margin-bottom: 8px;
+  }
+  .contact_wrapper article .contact_how .request_list .bottom_right {
+    margin-bottom: 4em;
+  }
+  .contact_wrapper article .contact_how .email_container .email_title {
+    font-size: 20px;
+  }
+  .contact_wrapper article .contact_how .email_container .email_green {
+    font-size: 16px;
+  }
+  .contact_wrapper article .contact_how .email_container .email_coral {
+    font-size: 16px;
+  }
   footer {
     padding: 30px 0;
   }
 }
 
-@media screen and (max-width: 1279px) {
-  .contact_wrapper .contact_title {
-    width: 100%;
-  }
-  .contact_wrapper article {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    width: 100%;
-  }
-  .contact_wrapper article .address_wrapper {
-    margin-right: 0;
-    margin-bottom: 38px;
-  }
-}
-
-/************************* 1100 반응형 *******************************/
-@media screen and (max-width: 1100px) {
+/************************* 1200 반응형 *******************************/
+@media screen and (max-width: 1200px) {
   .about_wrapper .about-title {
     width: 979px;
   }
@@ -831,6 +868,20 @@ footer .footer_copyright {
   .contact_wrapper {
     padding: 0;
     padding-bottom: 62px;
+  }
+  .contact_wrapper .contact_title {
+    width: 100%;
+  }
+  .contact_wrapper article {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .contact_wrapper article .address_wrapper {
+    margin-right: 0;
+    margin-bottom: 38px;
   }
   .contact_wrapper article .address_wrapper .address_title {
     font-size: 24px;
