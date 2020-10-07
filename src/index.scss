@@ -1152,6 +1152,24 @@ footer {
         }
     }
 
+    .work_wrapper {
+        article {
+            .slide_item {
+                &:nth-child(3) {
+                    img {
+                        left: -5%;
+                    }
+                }
+
+                &:nth-child(4) {
+                    img {
+                        left: 40%;
+                    }
+                }
+            }
+        }
+    }
+
     .contact_wrapper {
         .contact_title {
             font-size: 24px;

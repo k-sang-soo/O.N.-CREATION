@@ -1,13 +1,11 @@
-function scrollIndicator(e) {
+function scrollIndicator() {
     const scrollIndicatorLine = document.querySelector('.scroll_indicator');
-    const scrollIndicatorEffect = document.querySelector(
-        '.scroll_indicator_effect',
-    );
+    const scrollIndicatorEffect = document.querySelector('.scroll_indicator_effect');
     const maxHeight = window.document.body.scrollHeight - window.innerHeight;
     const percentage = (window.pageYOffset / maxHeight) * 100;
 
-    scrollIndicatorLine.style.width = `${percentage}%`;
-    scrollIndicatorEffect.style.left = `${percentage}%`;
+    scrollIndicatorLine.style.width = percentage + '%';
+    scrollIndicatorEffect.style.left = percentage + '%';
     if (scrollIndicatorEffect.style.left <= '0.5%') {
         scrollIndicatorEffect.style.left = '-15px';
         console.log('작다');
@@ -18,22 +16,10 @@ function scrollIndicator(e) {
         scrollIndicatorEffect.style.display = 'none';
     }
 
-    if (
-        scrollIndicatorEffect.style.left <= '99.9%' &&
-        scrollIndicatorEffect.style.display == 'none'
-    ) {
+    if (scrollIndicatorEffect.style.left <= '99.9%' && scrollIndicatorEffect.style.display == 'none') {
         console.log('ㅇㅇ');
         scrollIndicatorEffect.style.display = 'block';
     }
-}
-
-function navScrollEffect(target) {
-    const targetTop = document.querySelector(target).offsetTop;
-
-    window.scrollTo({
-        top: targetTop,
-        behavior: 'smooth',
-    });
 }
 
 function imgChange() {
@@ -88,11 +74,47 @@ function slider() {
     });
 }
 
+// function navScrollEffect(target) {
+//     const targetTop = document.querySelector(target).offsetTop;
+
+//     window.scrollTo({
+//         top: targetTop,
+//         behavior: 'smooth',
+//     });
+// }
+
+function navScrollEffect(target) {
+    const targetTop = document.querySelector(target).offsetTop;
+    const startPosition = window.pageYOffset;
+    const distance = targetTop - startPosition;
+    const duration = 500;
+    let start = null;
+
+    window.requestAnimationFrame(step);
+
+    function step(timestamp) {
+        if (!start) start = timestamp;
+        const progress = timestamp - start;
+        window.scrollTo(0, easeInOutQuad(progress, startPosition, distance, duration));
+        if (progress < duration) {
+            window.requestAnimationFrame(step);
+            console.log(startPosition);
+        }
+    }
+}
+
+function easeInOutQuad(t, b, c, d) {
+    t /= d / 2;
+    if (t < 1) return (c / 2) * t * t + b;
+    t--;
+    return (-c / 2) * (t * (t - 2) - 1) + b;
+}
+
 function naviScrollAnimation() {
     const scrollNav = document.querySelectorAll('.nav li a');
 
-    scrollNav.forEach((el, index) => {
-        el.addEventListener('click', () => {
+    [].forEach.call(scrollNav, function (el, index) {
+        el.addEventListener('click', function () {
             switch (index) {
                 case 0:
                     navScrollEffect('.home_wrapper');
@@ -119,12 +141,12 @@ function mobileClickEvent() {
     const navList = document.querySelector('.nav');
     const navListAni = document.querySelectorAll('.nav > li');
 
-    mobileNav.addEventListener('click', () => {
-        mobileNavAni.forEach((el) => {
+    mobileNav.addEventListener('click', function () {
+        [].forEach.call(mobileNavAni, function (el) {
             el.classList.toggle('nav_ani');
         });
         navList.classList.toggle('nav_ani');
-        navListAni.forEach((el) => {
+        [].forEach.call(navListAni, function (el) {
             el.classList.toggle('nav_ani');
         });
     });
@@ -139,13 +161,14 @@ function midLineAnimation() {
     let midLineTop = midLine.offsetTop;
     let midLineAnimation = false;
 
-    window.addEventListener('scroll', () => {
+    window.addEventListener('scroll', function () {
         let winY = window.pageYOffset;
         // scroll 이 중간을 넘었을 때
         if (midLineAnimation && winY >= midLineTop - headerHeight) {
             changeLogo.setAttribute('src', 'img/Logo.svg');
             midLine.style.position = 'fixed';
-            midLine.style.top = `${headerHeight}px`;
+            midLine.style.top = headerHeight + 'px';
+            midLine.style.left = '0'; //IE 오류 해결
             midLineAnimation = false;
             console.log('아');
         }
@@ -153,7 +176,7 @@ function midLineAnimation() {
         if (!midLineAnimation && winY < midLineTop - headerHeight) {
             changeLogo.setAttribute('src', 'img/Logo-change.svg');
             midLine.style.position = 'relative';
-            midLine.style.top = `0`;
+            midLine.style.top = '0';
             midLineAnimation = true;
             console.log('dh');
         }

@@ -1212,6 +1212,12 @@ footer .footer_copyright {
   .about_wrapper article .about_introduce .introduce_work_list {
     font-size: 12px;
   }
+  .work_wrapper article .slide_item:nth-child(3) img {
+    left: -5%;
+  }
+  .work_wrapper article .slide_item:nth-child(4) img {
+    left: 40%;
+  }
   .contact_wrapper .contact_title {
     font-size: 24px;
     padding: 0 20px;
