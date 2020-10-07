@@ -9,7 +9,7 @@
 }
 
 html {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'poppins', sans-serif;
   font-weight: 400;
   color: #f9f9f9;
 }
@@ -456,6 +456,7 @@ header .nav li:last-child {
 }
 
 .contact_wrapper article .address_wrapper .address_kor {
+  font-family: nanumgothic, sans-serif;
   font-size: 14px;
   margin-bottom: 3.571em;
   line-height: 1.8;
@@ -480,6 +481,7 @@ header .nav li:last-child {
 }
 
 .contact_wrapper article .contact_how .contact_how_title .kor {
+  font-family: nanumgothic, sans-serif;
   font-size: 15px;
   color: #7c7d80;
   line-height: 1.8;

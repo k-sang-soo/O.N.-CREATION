@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('font/Poppins-Regular.woff') format(‘woff’);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('font/Poppins-Light.woff') format(‘woff’);
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('font/Poppins-Medium.woff') format(‘woff’);
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url('font/Poppins-Bold.woff') format(‘woff’);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'NanumBarunGothic';
+    src: url('font/NanumBarunGothic.woff') format(‘woff’);
+    font-weight: 400;
+}
