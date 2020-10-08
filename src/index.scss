@@ -1,3 +1,5 @@
+/**********************font **********************/
+
 @font-face {
     font-family: 'Poppins';
     src: local('Poppins'), url('font/PoppinsRegular.woff') format(‘woff’), url('font/Poppins-Regular.ttf') format('truetype');
@@ -339,7 +341,7 @@ header {
 }
 
 .work_wrapper {
-    // pointer-events: none;
+    pointer-events: none;
 
     article {
         max-height: 100vh;
