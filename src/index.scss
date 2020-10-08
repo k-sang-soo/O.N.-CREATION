@@ -27,8 +27,8 @@
 }
 
 @font-face {
-    font-family: 'NanumBarunGothic';
-    src: local('NanumBarunGothic'), local('Poppins'), url('font/NanumGothicRegular.woff') format(‘woff’), url('font/NanumGothic-Regular.ttf') format('truetype');
+    font-family: 'Nanum Gothic';
+    src: local('Nanum Gothic'), url('font/NanumGothicRegular.woff') format(‘woff’), url('font/NanumGothic-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
 }
@@ -428,7 +428,7 @@ header {
                 }
 
                 .kor {
-                    font-family: 'NanumBarunGothic', sans-serif;
+                    font-family: 'Nanum Gothic', sans-serif;
                     font-size: 15px;
                     color: $gray;
                     line-height: 1.8;

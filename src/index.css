@@ -29,8 +29,8 @@
 }
 
 @font-face {
-  font-family: 'NanumBarunGothic';
-  src: local("NanumBarunGothic"), local("Poppins"), url("font/NanumGothicRegular.woff") format(‘woff’), url("font/NanumGothic-Regular.ttf") format("truetype");
+  font-family: 'Nanum Gothic';
+  src: local("Nanum Gothic"), url("font/NanumGothicRegular.woff") format(‘woff’), url("font/NanumGothic-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
@@ -517,7 +517,7 @@ header .nav li:last-child {
 }
 
 .contact_wrapper article .contact_how .contact_how_title .kor {
-  font-family: 'NanumBarunGothic', sans-serif;
+  font-family: 'Nanum Gothic', sans-serif;
   font-size: 15px;
   color: #7c7d80;
   line-height: 1.8;
