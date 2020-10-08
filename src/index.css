@@ -385,10 +385,6 @@ header .nav li:last-child {
   display: none;
 }
 
-.work_wrapper {
-  pointer-events: none;
-}
-
 .work_wrapper article {
   max-height: 100vh;
   overflow: hidden;
@@ -579,6 +575,19 @@ header .nav li:last-child {
 
 .contact_wrapper article .contact_how .email_container .email_sns {
   font-size: 26px;
+  margin-top: 0.23em;
+}
+
+.contact_wrapper article .contact_how .email_container .email_sns .fa-instagram {
+  opacity: 0;
+  -webkit-animation: instagram-icon 1500ms infinite linear;
+          animation: instagram-icon 1500ms infinite linear;
+}
+
+.contact_wrapper article .contact_how .email_container .email_sns .sns_title {
+  font-size: 0.615em;
+  margin-left: 0.46em;
+  vertical-align: middle;
 }
 
 footer {
@@ -673,6 +682,24 @@ footer .footer_copyright {
   100% {
     -webkit-transform: translateY(10px);
             transform: translateY(10px);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes instagram-icon {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes instagram-icon {
+  50% {
+    opacity: 1;
+  }
+  100% {
     opacity: 0;
   }
 }
@@ -822,7 +849,7 @@ footer .footer_copyright {
     margin-right: 0;
   }
   .contact_wrapper article .contact_how .request_list .bottom_right {
-    margin-bottom: 2.1em;
+    margin-bottom: 1.9em;
   }
   .contact_wrapper article .contact_how .email_container .email_title {
     font-size: 20px;
@@ -942,7 +969,7 @@ footer .footer_copyright {
     left: 0;
   }
   .work_wrapper article .slide_item .slide_item_title {
-    bottom: 15%;
+    bottom: 10%;
     left: 24px;
     font-size: 7.1vw;
   }
@@ -988,9 +1015,6 @@ footer .footer_copyright {
 @media screen and (max-width: 800px) {
   .about_wrapper .about-title {
     width: 756px;
-  }
-  .work_wrapper article .slide_item:nth-child(5) img {
-    width: 100%;
   }
   .work_wrapper article .slide_item .slide_item_img {
     height: 100vh;
