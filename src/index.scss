@@ -1,3 +1,36 @@
+@font-face {
+    font-family: 'Poppins';
+    src: local('Poppins'), url('font/PoppinsRegular.woff') format(‘woff’), url('font/Poppins-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: local('Poppins'), url('font/PoppinsLight.woff') format(‘woff’), url('font/Poppins-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: local('Poppins'), url('font/PoppinsMedium.woff') format(‘woff’), url('font/Poppins-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: local('Poppins'), url('font/PoppinsBold.woff') format(‘woff’), url('font/Poppins-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NanumBarunGothic';
+    src: local('NanumBarunGothic'), local('Poppins'), url('font/NanumGothicRegular.woff') format(‘woff’), url('font/NanumGothic-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
 /********************** 변수 **********************/
 $logo-green: #4aa389;
 $logo-coral: #da6d75;
