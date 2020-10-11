@@ -492,10 +492,11 @@ header .nav li:last-child {
 }
 
 .contact_wrapper article .address_wrapper .address_kor {
-  font-family: nanumgothic, sans-serif;
+  font-family: 'Nanum Gothic', sans-serif;
   font-size: 14px;
   margin-bottom: 3.571em;
   line-height: 1.8;
+  color: #7c7d80;
 }
 
 .contact_wrapper article .address_wrapper .address_map {
@@ -601,6 +602,10 @@ header .nav li:last-child {
 
 .contact_wrapper article .contact_how .email_container .email_title {
   font-size: 26px;
+}
+
+.contact_wrapper article .contact_how .email_container .email_title .title {
+  margin-left: 0.31em;
 }
 
 .contact_wrapper article .contact_how .email_container .email_coral {

@@ -404,10 +404,11 @@ header {
             }
 
             .address_kor {
-                font-family: nanumgothic, sans-serif;
+                font-family: 'Nanum Gothic', sans-serif;
                 font-size: 14px;
                 margin-bottom: 3.571em;
                 line-height: 1.8;
+                color: $gray;
             }
 
             .address_map {
@@ -490,6 +491,9 @@ header {
                 font-weight: $font-medium;
                 .email_title {
                     font-size: 26px;
+                    .title {
+                        margin-left: 0.31em;
+                    }
                 }
                 .email_coral {
                     font-size: 22px;
