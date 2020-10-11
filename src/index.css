@@ -605,7 +605,7 @@ header .nav li:last-child {
 }
 
 .contact_wrapper article .contact_how .email_container .email_title .title {
-  margin-left: 0.31em;
+  margin-left: 8px;
 }
 
 .contact_wrapper article .contact_how .email_container .email_coral {
@@ -631,7 +631,7 @@ header .nav li:last-child {
 
 .contact_wrapper article .contact_how .email_container .email_sns .sns_title {
   font-size: 0.615em;
-  margin-left: 0.46em;
+  margin-left: 8px;
   vertical-align: middle;
 }
 
