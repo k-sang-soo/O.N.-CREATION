@@ -288,7 +288,7 @@ header {
         font-size: 40px;
         font-weight: $font-bold;
         letter-spacing: 0.07em;
-        width: 1632px;
+        width: 1571px;
         padding: 0 24px;
         padding-bottom: 1.5em;
     }
@@ -586,7 +586,7 @@ footer {
 @media screen and (max-width: 1600px) {
     .about_wrapper {
         .about-title {
-            width: 1276px;
+            width: 1246px;
         }
         article {
             .about_img_container {
@@ -693,7 +693,7 @@ footer {
     .about_wrapper {
         .about-title {
             font-size: 32px;
-            width: 1134px;
+            width: 1108px;
         }
         article {
             .about_img_container {
@@ -793,7 +793,7 @@ footer {
 @media screen and (max-width: 1200px) {
     .about_wrapper {
         .about-title {
-            width: 979px;
+            width: 957px;
         }
         article {
             .about_img_container {
@@ -836,7 +836,7 @@ footer {
         padding: 68px 0;
         .about-title {
             position: static;
-            width: 752px;
+            width: 724px;
         }
         article {
             flex-direction: column;
@@ -959,12 +959,6 @@ footer {
 
 /************************* 800 반응형 *******************************/
 @media screen and (max-width: 800px) {
-    .about_wrapper {
-        .about-title {
-            width: 756px;
-        }
-    }
-
     .work_wrapper {
         article {
             .slide_item {
@@ -1074,7 +1068,7 @@ footer {
 
     .about_wrapper {
         .about-title {
-            width: 704px;
+            width: 696px;
         }
         article {
             padding: 0 20px;
@@ -1086,19 +1080,9 @@ footer {
                 margin-top: 2em;
                 .introduce_header {
                     font-size: 18px;
-
-                    .introduce_header_title {
-                        white-space: pre-line;
-                    }
                 }
                 .introduce_main {
                     font-size: 16px;
-                    li {
-                        white-space: pre-line;
-                        br {
-                            display: none;
-                        }
-                    }
                 }
                 .introduce_work_list {
                     font-size: 16px;
@@ -1116,14 +1100,6 @@ footer {
     .contact_wrapper {
         article {
             .address_wrapper {
-                .address_eng {
-                    br {
-                        display: none;
-                    }
-                    li {
-                        white-space: pre-line;
-                    }
-                }
                 .address_map {
                     width: 320px;
                 }
@@ -1173,6 +1149,18 @@ footer {
         .about-title {
             width: 100%;
         }
+        article {
+            .about_introduce {
+                .introduce_main {
+                    li {
+                        white-space: pre-line;
+                        br {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 /************************* 480 반응형 *******************************/
@@ -1197,6 +1185,9 @@ footer {
             .about_introduce {
                 .introduce_header {
                     font-size: 14px;
+                    .introduce_header_title {
+                        white-space: pre-line;
+                    }
                 }
                 .introduce_main {
                     font-size: 12px;
